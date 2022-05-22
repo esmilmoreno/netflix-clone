@@ -1,0 +1,75 @@
+.featured-section{
+  width: 100%;
+  position: relative;
+}
+
+.featured-section > img{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.featured-overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 50%;
+  padding-top: 11.1vw;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 3.8vw;
+  color: #fff;
+  background-color: transparent;
+  background: linear-gradient(to right, rgba(0, 0, 0, .6), transparent);
+}
+
+.featured-cover{
+  width: 35vw;
+}
+
+.featured-description{
+  font-size: 1.4vw;
+  text-shadow: 2px 2px 4px rgba(0,0,0,.45);
+}
+
+.featured-buttons{
+  display: flex;
+  flex-direction: row;
+  gap: .7vw;
+}
+
+.featured-button{
+  border: none;
+  outline-offset: 2px;
+  display: flex;
+  gap: .7vw;
+  align-items: center;
+  cursor: pointer;
+  border-radius: var(--radius);
+  font-size: 1.3vw;
+  font-weight: bold;
+  padding: .5vw 1.5vw;
+  background-color: rgba(109, 109, 110, 0.7);
+  color: #fff;
+  transition: opacity 100ms ease-in-out;
+}
+
+.featured-button:hover{
+  opacity: .8;
+}
+
+.featured-button:active, .featured-button:focus{
+  outline: 2px #fff solid;
+}
+
+.featured-button > img{
+  width: 1.3vw;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.featured-buttons > :first-child{
+  background-color: #fff;
+  color: #333;
+}

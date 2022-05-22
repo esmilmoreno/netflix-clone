@@ -1,0 +1,58 @@
+.floating-label-input{
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+}
+
+.floating-label-input > input{
+  flex-grow: 1;
+  border: 1px var(--border-color) solid;
+  font-size: 1rem;
+  padding: 1.5rem 1rem .5rem 1rem;
+  outline: none;
+}
+
+.floating-label-input.large > input{
+  padding: 1.8rem 1rem .7rem 1rem;
+}
+
+.floating-label-input > label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: left;
+  pointer-events: none;
+  color: gray;
+  padding: 1rem;
+  transition: padding-top 100ms ease-in-out, font-size 100ms ease-in-out;
+}
+
+.floating-label-input.large > label{
+  padding: 1.25rem 1rem;
+}
+
+.floating-label-input > input:invalid{
+  border-bottom: 2px solid #ffa00a;
+}
+
+.floating-label-input > input:focus + label, .floating-label-input > input:not(:placeholder-shown) + label{
+  padding-top: .5rem;
+  font-size: .9rem;
+}
+
+@media (max-width: 550px) {
+  .floating-label-input.large > input{
+    padding: 1.3rem 1rem .7rem 1rem;
+  }
+
+  .floating-label-input > input:focus + label, .floating-label-input > input:not(:placeholder-shown) + label{
+    padding-top: .2rem;
+    font-size: .9rem;
+  }
+
+  .floating-label-input.large > label{
+    padding: 1rem 1rem;
+  }
+}
