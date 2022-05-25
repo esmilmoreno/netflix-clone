@@ -122,6 +122,10 @@
   border-top: 15px solid var(--primary);
 }
 
+.plan-detail.active{
+  color: var(--primary);
+}
+
 .notes{
   font-size: .875rem;
   margin: 0 1rem 1rem 1rem;
@@ -153,6 +157,10 @@
   filter: brightness(0.875);
 }
 
+.signup-button:disabled{
+  opacity: .5;
+}
+
 .signup-form{
   display: flex;
   flex-direction: column;
@@ -167,6 +175,17 @@
 
 .signup-footer-container{
   background-color: #f3f3f3;
+}
+
+.signup-error-message{
+  background-color: #ffa00a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+  margin-bottom: 2rem;
 }
 
 @keyframes slide-in {

@@ -1,0 +1,121 @@
+.signin-page{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0,0,0,.4);
+}
+
+.signin-background{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.singin-form{
+  flex-grow: 1;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto 5rem auto;
+  padding: 3rem 4rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: var(--radius);
+}
+
+.signin-title{
+  margin-bottom: 2rem;
+}
+
+.signin-error-message{
+  background-color: #e87c03;
+  border-radius: var(--radius);
+  padding: .5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.signin-input-container{
+  position: relative;
+  margin-bottom: 1rem
+}
+
+.signin-input-container > input{
+  width: 100%;
+  padding: 1.5rem 1rem .5rem 1rem;
+  outline: none;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: var(--radius);
+  font-size: 1rem;
+
+  transition: background-color 100ms;
+}
+
+.signin-input-container label{
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  color: #999;
+
+  transition: padding 100ms, font-size 100ms;
+}
+
+.signin-input-container > input:focus + label, .signin-input-container > input:not(:placeholder-shown) + label{
+  padding-top: .5rem;
+  font-size: .8rem;
+}
+
+.signin-input-container > input:focus{
+  background-color: #444;
+}
+
+.signin-input-container > input:invalid{
+  border-bottom: 2px #e87c03 solid;
+}
+
+.singin-invalid-input{
+  font-size: .9rem;
+  padding: .5rem .2rem 0 .2rem;
+  color: #e87c03;
+}
+
+.signin-button{
+  font-size: 1.125rem;
+  width: 100%;
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  margin: 2rem 0;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.signin-button:disabled{
+  opacity: .5;
+}
+
+.new-to-netflix{
+  color: gray;
+}
+
+.new-to-netflix a{
+  color: #fff;
+}
+
+/* footer styling */
+.signin-footer-container{
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.signin-footer{
+  width: auto;
+  max-width: 1000px;
+  margin: 2.5rem auto;
+}

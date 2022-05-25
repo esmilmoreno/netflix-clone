@@ -21,6 +21,27 @@
   margin: .5rem .2rem;
 }
 
+.get-started-button{
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  margin-left: auto;
+  padding: .7rem 1.5rem;
+  font-size: 16px;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  font-size: 2rem;
+}
+
+.get-started-button.authenticated{
+  border-radius: var(--radius);
+  width: auto;
+  margin-inline: auto;
+}
+
 @media (max-width: 550px) {
   .getstarted-form{
     width: 100%;

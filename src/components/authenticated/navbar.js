@@ -1,8 +1,11 @@
 import { useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { useAuth } from '../../auth-context'
 import './navbar.css'
 
 export default function Navbar() {
+  const { signOut } = useAuth()
+  
   const alerts = [
     {
       img: 'https://dnm.nflximg.net/api/v6/kvDymu0eXRyicIuSUzvRrxrm5dU/AAAABcJxhlPo63shqfoLssgynYEGYk5MvvH1iBYq5IU0DtCQLISZ16g3HJxDVtpHSrgGgwVtbDS5GD294MOGB6HIAt4O1IUIQlHkFs1KtHiOjaETrt_XlwiffGmkg5SJ0KQKHMmyYlwlM0hDZqE.jpg?r=0e6',
@@ -138,7 +141,7 @@ export default function Navbar() {
                 Help Center</Link>
             </li>
             <li className='user-drop-down-menu-item'>
-              <Link to=''>Sign out of Movies</Link>
+              <button onClick={signOut}>Sign out of Movies</button>
             </li>
           </ul>
         </div>

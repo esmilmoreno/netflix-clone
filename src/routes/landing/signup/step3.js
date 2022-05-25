@@ -1,8 +1,6 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function SignUp() {
-  const { state } = useLocation()
-
   return (
     <div className='signup-step'>
       <div className='step-container-centered'>
@@ -27,7 +25,7 @@ export default function SignUp() {
           </svg>
           Unlimited viewing on all your devices.
         </p>
-        <Link to='/signup/step4' state={state} style={{width: '100%'}}><button className="signup-button">Next</button></Link>
+        <Link to='/signup/step4' style={{width: '100%'}}><button className="signup-button">Next</button></Link>
       </div>
     </div>
   )

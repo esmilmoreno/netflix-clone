@@ -87,12 +87,6 @@
   z-index: 1;
 }
 
-.landing-button.large{
-  font-size: 1.625rem;
-  border-radius: 0;
-  padding-inline: 1.5rem;
-}
-
 .row{
   display: flex;
   flex-direction: row;
