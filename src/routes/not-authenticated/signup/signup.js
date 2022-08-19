@@ -1,6 +1,6 @@
 import './signup.css'
 import { useEffect } from "react"
-import Navbar from '../navbar'
+import Navbar from '../components/navbar'
 import { Link, Outlet } from "react-router-dom"
 
 export default function SignUp() {

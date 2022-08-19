@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './get-started-form.css'
 import { useNavigate } from 'react-router-dom'
-import BaseInput from './base-input'
-import { useAuth } from '../../auth-context'
+import { useAuth } from '../../../auth-context'
 
 export default function GetStartedForm() {
   const { user } = useAuth()
@@ -32,13 +31,10 @@ export default function GetStartedForm() {
         <>
           <h3 style={{fontWeight: 'normal'}}>Ready to watch? Enter your email to create or restart your membership.</h3>
           <div className='getstarted-form-row'>
-            <BaseInput
-              reference={input}
-              type='email'
-              value={email}
-              onChange={setEmail}
-              placeHolder='Email address'
-            />
+            <div className='getstarted-input-container'>
+              <input ref={input} type='email' name='email' value={email} onChange={ ({target}) => setEmail(target.value) } placeholder=' ' required />
+              <label>Email address</label>
+            </div>
             <button className='get-started-button' type='submit'>
               Get Started
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-right" viewBox="0 0 16 16">

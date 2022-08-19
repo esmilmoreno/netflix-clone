@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import { useAuth } from "../../../auth-context"
-import Loader from '../../../components/landing/loader'
+import Loader from './../components/loader'
 
 export default function Step2() {
   const { user } = useAuth()
@@ -51,9 +51,10 @@ function RegForm() {
         </p>
 
         <form className='signup-form' onSubmit={onSubmit}>
-          <div className='floating-label-input'>
+          <div className='getstarted-input-container'>
             <input
               type='email'
+              name='email'
               value={email}
               onChange={ ({target}) => setEamil(target.value) }
               placeholder=' '
@@ -62,9 +63,10 @@ function RegForm() {
             <label>Email address</label>
           </div>
 
-          <div className='floating-label-input'>
+          <div className='getstarted-input-container'>
             <input
               type='password'
+              name='password'
               value={password}
               onChange={ ({target}) => setPassword(target.value) }
               placeholder=' '

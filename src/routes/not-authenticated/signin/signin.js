@@ -1,8 +1,8 @@
 import './signin.css'
 import { Link } from "react-router-dom";
 import { useState } from 'react';
-import { useAuth } from '../../auth-context';
-import Loader from '../../components/landing/loader';
+import { useAuth } from '../../../auth-context';
+import Loader from '../components/loader';
 
 export default function SignIn() {
   const { signIn } = useAuth()
@@ -54,12 +54,12 @@ export default function SignIn() {
         </p>}
 
         <div className='signin-input-container'>
-          <input type='email' value={email} onChange={handleEmailChange} placeholder=' ' required />
+          <input type='email' name='email' value={email} onChange={handleEmailChange} placeholder=' ' required />
           <label>Email address</label>
           {!emailIsValid && <p className='singin-invalid-input'>Please enter a valid email address</p>}
         </div>
         <div className='signin-input-container'>
-          <input type='password' minLength={6} value={password} onChange={handlePasswordChange} placeholder=' ' required />
+          <input type='password' name='password' minLength={6} value={password} onChange={handlePasswordChange} placeholder=' ' required />
           <label>Password</label>
           {!passwordIsValid && <p className='singin-invalid-input'>Your password must contain between 6 and 60 characters.</p>}
         </div>

@@ -12,18 +12,28 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: var(--dark);
+  color: #fff;
+}
+
 a{
   text-decoration: none;
 }
 
 .loading-screen{
-  background-color: #141414;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10rem;
+  font-size: max(2rem, 5vw);
   border-color: var(--primary);
 }
 

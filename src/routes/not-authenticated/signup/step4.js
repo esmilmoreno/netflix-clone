@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuth } from "../../../auth-context";
-import Loader from "../../../components/landing/loader";
+import Loader from "../components/loader";
 
 const plans = [
   {

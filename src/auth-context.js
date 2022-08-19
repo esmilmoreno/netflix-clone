@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, useMemo, useReducer } from "react
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth'
 import { auth, db } from './firebase'
 import { addDoc, collection, getDocs, limit, onSnapshot, query, where } from "firebase/firestore"
-import Loader from "./components/landing/loader"
+import Spinner from "./components/spinner"
 
 const authContext = createContext()
 
@@ -117,7 +117,7 @@ export const AuthProvider = ({ children }) => {
   
   if(authStateContext.loading) return (
     <div className='loading-screen'>
-      <Loader />
+      <Spinner />
     </div>
   )
   

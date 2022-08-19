@@ -1,0 +1,131 @@
+.getstarted-form{
+  width: 68%;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.getstarted-form-row{
+  display: grid;
+  grid-template-columns: 65% 35%;
+}
+
+.getstarted-form > h3{
+  font-weight: normal;
+  margin-bottom: 1rem;
+  margin-inline: 1rem;
+  text-align: center;
+}
+
+.invalid-label{
+  color: #ffa00a;
+  margin: .5rem .2rem;
+}
+
+.get-started-button{
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  margin-left: auto;
+  padding: .7rem 1.5rem;
+  font-size: 16px;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  font-size: 2rem;
+}
+
+.get-started-button.authenticated{
+  border-radius: var(--radius);
+  width: auto;
+  margin-inline: auto;
+}
+
+.getstarted-input-container{
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+}
+
+.getstarted-input-container > input{
+  flex-grow: 1;
+  border: 1px var(--border-color) solid;
+  font-size: 1rem;
+  padding: 1.5rem 1rem .5rem 1rem;
+  outline: none;
+}
+
+.getstarted-input-container.large > input{
+  padding: 1.8rem 1rem .7rem 1rem;
+}
+
+.getstarted-input-container > label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: left;
+  pointer-events: none;
+  color: gray;
+  padding: 1rem;
+  transition: padding-top 100ms ease-in-out, font-size 100ms ease-in-out;
+}
+
+.getstarted-input-container.large > label{
+  padding: 1.25rem 1rem;
+}
+
+.getstarted-input-container > input:invalid{
+  border-bottom: 2px solid #ffa00a;
+}
+
+.getstarted-input-container > input:focus + label, .getstarted-input-container > input:not(:placeholder-shown) + label{
+  padding-top: .5rem;
+  font-size: .9rem;
+}
+
+@media (max-width: 550px) {
+  .getstarted-form{
+    width: 100%;
+  }
+
+  .getstarted-input-container.large > input{
+    padding: 1.3rem 1rem .7rem 1rem;
+  }
+
+  .getstarted-input-container > input:focus + label, .getstarted-input-container > input:not(:placeholder-shown) + label{
+    padding-top: .2rem;
+    font-size: .9rem;
+  }
+
+  .getstarted-input-container.large > label{
+    padding: 1rem 1rem;
+  }
+}
+
+@media (max-width: 950px) {
+  .getstarted-form-row{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .invalid-label{
+    grid-row-start: 2;
+  }
+
+  .get-started-button{
+    border-radius: var(--radius) !important;
+    font-size: 1rem !important;
+    margin-top: 1rem;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 951px) {
+  .get-started-button{
+    width: 100%;
+    justify-content: center;
+  }
+}

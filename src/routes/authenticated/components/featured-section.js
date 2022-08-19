@@ -1,11 +1,11 @@
 import './featured-section.css'
 
 export default function FetuaturedSection({ movie }) {
-  return (
+  if(movie) return (
     <section className='featured-section'>
-      <img alt="not found" src={movie.cover} />
+      <img alt="not found" src={movie.trailer} />
       <div className='featured-overlay'>
-        <img className='featured-cover' src={movie.image} alt='not found' />
+        <img className='featured-title-image' src={movie.titleImage} alt='not found' />
         <p className='featured-description'>
           {movie.description.slice(0,150)}...
         </p>

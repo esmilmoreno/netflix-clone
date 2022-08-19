@@ -14,17 +14,17 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 50%;
-  padding-top: 11.1vw;
+  width: 50%;
+  padding: 11.1vw 3.8vw 0 3.8vw;
   display: flex;
   flex-direction: column;
-  padding-inline: 3.8vw;
-  color: #fff;
+  gap: 1.625rem;
   background-color: transparent;
   background: linear-gradient(to right, rgba(0, 0, 0, .6), transparent);
+  color: #fff;
 }
 
-.featured-cover{
+.featured-title-image{
   width: 35vw;
 }
 
@@ -36,20 +36,20 @@
 .featured-buttons{
   display: flex;
   flex-direction: row;
-  gap: .7vw;
+  gap: 1.625rem;
 }
 
 .featured-button{
   border: none;
   outline-offset: 2px;
   display: flex;
-  gap: .7vw;
+  gap: 1.125rem;
   align-items: center;
   cursor: pointer;
   border-radius: var(--radius);
   font-size: 1.3vw;
   font-weight: bold;
-  padding: .5vw 1.5vw;
+  padding: .625rem 1.625rem;
   background-color: rgba(109, 109, 110, 0.7);
   color: #fff;
   transition: opacity 100ms ease-in-out;

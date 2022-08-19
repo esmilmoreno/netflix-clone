@@ -1,0 +1,24 @@
+.profile-form-checkbox-container{
+  display: flex;
+  align-items: center;
+  gap: .5em;
+}
+
+.profile-form-checkbox{
+  display: inline-block;
+  width: calc(max(1em, 1.3vw) + 1em);
+  aspect-ratio: 1;
+  border: 1px var(--border-color) solid;
+}
+
+.profile-form-checkbox input{
+  display: none;
+}
+
+.profile-form-checkbox input:checked + svg{
+  display: block;
+}
+
+.profile-form-checkbox svg{
+  display: none;
+}
